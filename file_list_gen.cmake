@@ -1,0 +1,14 @@
+list(
+  APPEND
+  PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/wd_route/wd_route.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/wd_route/wd_route_xml_parser.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/wd_route/wd_route_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/stop_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/main_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/train_route_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/ui.c
+  ${CMAKE_CURRENT_LIST_DIR}/train_route.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/nn_regular_30_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/nn_regular_50_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/nn_bold_30_data.c)

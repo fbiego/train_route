@@ -1,0 +1,15 @@
+<screen>
+   <view extends="lv_obj">
+
+
+    <wd_route bind_subject="progress">
+      <wd_route-stops index="0">
+         <stop station="Stuttgart Hbf"></stop>
+         <stop station="Karlsruhe Hbf"></stop>
+         <stop station="Strasbourg City"></stop>
+         <stop station="Paris Est"></stop>
+      </wd_route-stops>
+    </wd_route>
+
+   </view>
+</screen>
