@@ -26,19 +26,15 @@ extern "C" {
 
 typedef struct {
     lv_obj_t obj;  /* Base widget to extend */
-    void * stops;
-    void * value;
-    void * bind_subject;
+    int32_t value;
+    lv_subject_t * bind_subject;
     void * observer;
-    lv_obj_t * style_route;
-    lv_obj_t * lv_obj_1;
-    lv_obj_t * lv_slider_1;
-    lv_obj_t * style_slider;
-    lv_obj_t * style_indicator;
-    lv_obj_t * clear;
+    lv_obj_t * lv_obj_0;
+    lv_obj_t * lv_slider_0;
     lv_obj_t * stop_cont;
-    lv_obj_t * cont;
 } wd_route_t;
+
+extern const lv_obj_class_t wd_route_class;
 
 /**********************
  * GLOBAL PROTOTYPES

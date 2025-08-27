@@ -13,7 +13,13 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lvgl/lvgl.h"
+#ifdef LV_LVGL_H_INCLUDE_SIMPLE
+    #include "lvgl.h"
+#else
+    #include "lvgl/lvgl.h"
+#endif
+
+#include "train_route_gen.h"
 
 /*********************
  *      DEFINES
@@ -22,6 +28,9 @@ extern "C" {
 /**********************
  *      TYPEDEFS
  **********************/
+
+
+
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -36,32 +45,32 @@ lv_obj_t * wd_route_create(lv_obj_t * parent);
 
 
 /**
- * Set the stops
- * @param obj   pointer to a wd_route
- * @param stops  stops
- */
-void wd_route_set_stops(lv_obj_t * obj, void * stops);
-
-/**
- * Set the value
+ * wd_route value
  * @param obj   pointer to a wd_route
  * @param value  value
  */
-void wd_route_set_value(lv_obj_t * obj, int32_t value);
+void wd_route_set_value(lv_obj_t * wd_route, int32_t value);
 
 /**
- * Set the bind_subject
+ * wd_route bind_subject
  * @param obj   pointer to a wd_route
  * @param bind_subject  bind_subject
  */
-void wd_route_set_bind_subject(lv_obj_t * obj, void * bind_subject);
+void wd_route_bind_subject(lv_obj_t * wd_route, lv_subject_t * bind_subject);
 
 /**
- * Set the observer
+ * wd_route observer
  * @param obj   pointer to a wd_route
  * @param observer  observer
  */
-void wd_route_set_observer(lv_obj_t * obj, lv_obj_t * observer);
+void wd_route_set_observer(lv_obj_t * wd_route, void * observer);
+
+/**
+ * wd_route stops
+ * @param obj   pointer to a wd_route
+ * @param index  index
+ */
+lv_obj_t * wd_route_get_stops(lv_obj_t * wd_route, int32_t index);
 
 /**********************
  *      MACROS
